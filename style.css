@@ -17,3 +17,22 @@ canvas {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
+body {
+    font-size: 4vh;
+  }
+
+  button {
+    font-size: 4vh;
+}
+
+
+@media screen and (max-width: 600px) {
+    body {
+    font-size: 3vh;
+  }
+
+  button {
+    font-size: 3vh;
+  }
+}
