@@ -1,0 +1,217 @@
+canvas {
+  display: block;
+}
+
+#OCP {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#Children {
+  display: none;
+  margin: 0;
+  position: absolute;
+  top: 58%;
+  left: 35%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#Children2 {
+  display: none;
+  margin: 0;
+  position: absolute;
+  top: 58%;
+  left: 65%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#ChildrenName {
+  display: none;
+}
+
+#Animals {
+  display: none;
+  margin: 0;
+  position: absolute;
+  top: 58%;
+  left: 35%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#Animals2 {
+  display: none;
+  margin: 0;
+  position: absolute;
+  top: 58%;
+  left: 65%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#AnimalsName {
+  display: none;
+}
+
+#Shelters {
+  display: none;
+  margin: 0;
+  position: absolute;
+  top: 58%;
+  left: 35%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#Shelters2 {
+  display: none;
+  margin: 0;
+  position: absolute;
+  top: 58%;
+  left: 65%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#SheltersName {
+  display: none;
+}
+
+#Research {
+  display: none;
+  margin: 0;
+  position: absolute;
+  top: 58%;
+  left: 35%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#Research2 {
+  display: none;
+  margin: 0;
+  position: absolute;
+  top: 58%;
+  left: 65%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#ResearchName {
+  display: none;
+}
+
+#Nature {
+  display: none;
+  margin: 0;
+  position: absolute;
+  top: 58%;
+  left: 35%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#Nature2 {
+  display: none;
+  margin: 0;
+  position: absolute;
+  top: 58%;
+  left: 65%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#NatureName {
+  display: none;
+}
+
+body {
+    font-size: 4vh;
+    font-family: Georgia, serif ;
+    background-color: #c9ead2;
+  }
+
+  button {
+    font-size: 4vh;
+    font-family: Georgia, serif;
+    border-radius: 10px;
+    border-width: 0;
+    background-color: #abd7e8;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 600px) {
+    body {
+    font-size: 3vh;
+  }
+
+  button {
+    font-size: 3vh;
+  }
+}
+
+#back_arrow_1 {
+  position: absolute;
+  top: -15vh;
+  left: -21vw;
+  cursor: pointer; 
+}
+
+#back_arrow_2 {
+  position: absolute;
+  top: -15vh;
+  left: -15vw; 
+  cursor: pointer;
+}
+
+#back_arrow_3 {
+  position: absolute;
+  top: -15vh;
+  left: -15vw; 
+  cursor: pointer;
+}
+
+#back_arrow_4 {
+  position: absolute;
+  top: -15vh;
+  left: -15vw; 
+  cursor: pointer;
+}
+
+#back_arrow_5 {
+  position: absolute;
+  top: -15vh;
+  left: -21vw; 
+  cursor: pointer;
+}
+
+#nature_image {
+  position:  absolute;
+  top:  42vh;
+  left:  -11vw;
+}
+
+#children_image {
+  position:  absolute;
+  top:  13vh;
+  left:  25vw;
+}
+
+#animals_image {
+  position:  absolute;
+  top:  13vh;
+  left:  -8vw;
+}
+
+#medical_image {
+  position:  absolute;
+  top:  42vh;
+  left:  28vw;
+}
