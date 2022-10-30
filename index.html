@@ -7,18 +7,85 @@
 
 <center>
   <div id = "frontpage">
-  <h2>Goal: $100</h2>
-  <h2>Spent: $0</h2>
+  <h2>Goal: $<span id="goaltext">100</span></h2>
+  <h2 id="spent">Spent: $<span id="0" class="spent2">0</span><input id="input" type="text" onkeypress="clickPress(event)" class="spent2"></input></h2>
   <button onclick="GM()">View Charities Near Me</button>
   <br>
   <br>
-  <button>View Online Charities</button>
+  <button onclick="OC()">View Online Charities</button>
 </div>
+</center>
+
+<center>
+  <div id = "goal">
+    <h2>Chose your goal: <input id="goalinput" type="text" onkeypress="clickPress2(event)"></input></h2>
+    <br>
+    <h3 id="dsc">
+      Welcome to Charity Tracker! I created this website for the purpose of easily locating both online and physical charities nearby. I have hand selected the most reliable 90 charities for a wide variety of topics including charities that contribute to helping children, animals, homeless individuals, medical research, and so on. 
+    </h3>
+  </div>
 </center>
   
 <script>
+  document.getElementById("goal").style.display = "none"
+
+  function setCookie(c_name,value,exdays){var exdate=new Date();exdate.setDate(exdate.getDate() + exdays);var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());document.cookie=c_name + "=" + c_value;}
+
+  function getCookie(c_name){var c_value = document.cookie;var c_start = c_value.indexOf(" " + c_name + "=");if (c_start == -1){c_start = c_value.indexOf(c_name + "=");}if (c_start == -1){c_value = null;}else{c_start = c_value.indexOf("=", c_start) + 1;var c_end = c_value.indexOf(";", c_start);if (c_end == -1){c_end = c_value.length;}c_value = unescape(c_value.substring(c_start,c_end));}return c_value;}
+
+  checkSession();
+
+  function checkSession(){
+     var c = getCookie("visited");
+     if (c === "yes") {
+        //do nothing
+     } else {
+        document.getElementById("frontpage").style.display = "none"
+        document.getElementById("goal").style.display = "block"
+     }
+     setCookie("visited", "yes", 0.0000000001); // expire in 1 year; or use null to never expire
+  }
+
+  document.getElementById("input").style.display = "none"
   function GM() {
     window.location.href = 'https://github225-68.github.io/GoogleMapsH.html';
+  }
+
+  function OC() {
+    window.location.href = 'https://github225-68.github.io/OnlineCH.html'
+  }
+
+  document.getElementById("spent").addEventListener("click", inputAsk);
+
+  function inputAsk() {
+    document.getElementById("0").style.display = "none"
+    document.getElementById("input").style.display = "inline"
+  }
+
+  function clickPress(event) {
+    if (event.key == "Enter") {
+      document.getElementById("0").innerHTML = document.getElementById("input").value;
+      document.getElementById("0").style.display = "inline"
+      document.getElementById("input").style.display = "none"
+      setCookie("spent", document.getElementById("input").value, null);
+    }
+  }
+
+   function clickPress2(event) {
+    if (event.key == "Enter") {
+      document.getElementById("goaltext").innerHTML = document.getElementById("goalinput").value;
+      document.getElementById("frontpage").style.display = "block"
+      document.getElementById("goal").style.display = "none"
+      setCookie("goal", document.getElementById("goalinput").value, null);
+    }
+  }
+
+  window.onload = function() {
+    var s = getCookie("spent");
+    document.getElementById("0").innerHTML = s
+
+    var g = getCookie("goal");
+    document.getElementById("goaltext").innerHTML = g
   }
 </script>
 </body>
